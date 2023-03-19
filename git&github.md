@@ -4,9 +4,9 @@
 
 # Git核心原理
 
-![1](F:/lifeProject/typora/git_test/git&github/images\1.png)
+![1](https://raw.githubusercontent.com/ajuicefans/git_learning/main/images/1.png)
 
-![2](F:/lifeProject/typora/git_test/git&github/images\2.png)
+![2](https://raw.githubusercontent.com/ajuicefans/git_learning/main/images/2.png)
 
 ---
 
