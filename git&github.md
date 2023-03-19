@@ -63,5 +63,67 @@ git config --global init.defaultBranch main
 
 ---
 
+### `git status`
 
+告诉你当前所处分支；还会告诉你文件的状态
+
+- Untracked files：未追踪文件，处于工作区，需要进行 `git add` 操作添加到缓存区
+
+- nothing to commit, working tree clean：执行了`git commit`操作后，已经添加到了本地版本库
+
+> 下面的两个提示，如果出现相同内容，则是**在提交内容到暂存区，还没来得及提交到本地版本库时**，==**又对工作区的内容修改**==时，会同时出现
+
+- Changes to be committed：可以提交到本地版本库
+- Changes not staged for commit：已经发生变化，但还没提交到暂存区的内容
+
+### `git add`
+
+### `git commit`
+
+`git commit -a -m "xxx"`或 `git commit -am "xxx"`：从工作区一下跳到本地版本库
+
+### `git log`
+
+查看前面提交到本地版本库的版本
+
+除了提交者和时间和版本描述，还有哈希数字（代表着每次不同的commit）
+
+### `.gitignore`文件
+
+在 `.gitignore` 文件里添加图片的名字和后缀，可以表示我们要忽略的文件
+
+这个时候 `git status` 就看不到图片未追踪的提示了
+
+
+
+### 分支
+
+####  `git branch`：查看分支
+
+#### `git branch 分支名`：创建分支
+
+#### `git checkout 分支名`：切换分支
+
+第一次切换过来后的文件是直接从主分支复制来的，这时候动该分支下的文件，不会影响到主分支
+
+`git checkout -b temp`：创建分支并且切换到该分支
+
+#### `git branch -d`和`git branch -D`：删除分支
+
+`-d`：当该分支还为和主分支合并，删除时会有提示
+
+`-D`：会直接删除掉，没有提示
+
+#### `git merge`：把别的分支合并到当前所处的分支上
+
+##### 冲突：当前位置 和 合并的分支内容==同时修改，但是依旧不同==的地方
+
+- 可以自己修改，选择需要的即可
+- 也可以用一些merge工具来处理
+
+---
+
+
+
+## Github
 
