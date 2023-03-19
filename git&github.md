@@ -12,6 +12,8 @@
 
 
 
+
+
 # Git实操
 
 ### 用户设置
@@ -63,6 +65,8 @@ git config --global init.defaultBranch main
 
 ---
 
+
+
 ### `git status`
 
 告诉你当前所处分支；还会告诉你文件的状态
@@ -76,17 +80,25 @@ git config --global init.defaultBranch main
 - Changes to be committed：可以提交到本地版本库
 - Changes not staged for commit：已经发生变化，但还没提交到暂存区的内容
 
+
+
 ### `git add`
+
+
 
 ### `git commit`
 
 `git commit -a -m "xxx"`或 `git commit -am "xxx"`：从工作区一下跳到本地版本库
+
+
 
 ### `git log`
 
 查看前面提交到本地版本库的版本
 
 除了提交者和时间和版本描述，还有哈希数字（代表着每次不同的commit）
+
+
 
 ### `.gitignore`文件
 
@@ -98,9 +110,13 @@ git config --global init.defaultBranch main
 
 ### 分支
 
-####  `git branch`：查看分支
+#### `git branch`：查看分支
+
+
 
 #### `git branch 分支名`：创建分支
+
+
 
 #### `git checkout 分支名`：切换分支
 
@@ -108,11 +124,15 @@ git config --global init.defaultBranch main
 
 `git checkout -b temp`：创建分支并且切换到该分支
 
+
+
 #### `git branch -d`和`git branch -D`：删除分支
 
 `-d`：当该分支还为和主分支合并，删除时会有提示
 
 `-D`：会直接删除掉，没有提示
+
+
 
 #### `git merge`：把别的分支合并到当前所处的分支上
 
