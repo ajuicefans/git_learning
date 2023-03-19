@@ -153,9 +153,45 @@ git config --global init.defaultBranch main
 
 
 
-#### `git clone [github code下复制的https的地址]`
+#### `git clone [github网址 即URL]`
 
 这样就能看到`.git`文件夹了
 
 
+
+#### `git remote`
+
+`git remote -v`：查看本地仓库和哪些远程仓库有联系
+
+`git remote add [别名] [github网址 即URL]`：为github的仓库添加别名，push的时候，就可以用别名代替URL了
+
+
+
+#### `git push`：把本地版本库提交到远程仓库
+
+2021年不能直接通过账号密码的形式来push代码了，需要生成 `个人访问token`
+
+
+
+#### `git fetch`：把远程仓库整到本地版本库
+
+本地文件，即工作区此时还不会发生变化
+
+`git fetch` 可以指定远程仓库和分支名
+
+
+
+#### `git diff [远程仓库名]/[分支名]`：可以查看区别
+
+
+
+#### `git pull`：把远程仓库内容 直接整到 工作区
+
+这时候`git log`就可以看到所有的版本历史了，而且本地文件也被修改了
+
+
+
+---
+
+## VS Code也自带Git功能
 
