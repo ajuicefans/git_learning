@@ -147,3 +147,15 @@ git config --global init.defaultBranch main
 
 ## Github
 
+#### `Download ZIP`：只会下载最新版本，不会下载其中的版本历史和记录
+
+即压缩文件里，没有 `.git` 文件夹，所以最好用`git clone`
+
+
+
+#### `git clone [github code下复制的https的地址]`
+
+这样就能看到`.git`文件夹了
+
+
+
