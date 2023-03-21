@@ -196,3 +196,8 @@ git config --global init.defaultBranch main
 ## VS Code也自带Git功能
 
 ~
+
+---
+
+![鱼皮](https://raw.githubusercontent.com/ajuicefans/git_learning/main/images/Git%20%26%20GitHub%20%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%20by%20%E7%A8%8B%E5%BA%8F%E5%91%98%E9%B1%BC%E7%9A%AE.png)
+
