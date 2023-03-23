@@ -1,3 +1,7 @@
+视频地址：[git_路飞学城](https://www.bilibili.com/video/BV1yQ4y1Y7jR/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click&vd_source=f111e229e8ddffc692d57d989194e313)
+
+
+
 ## 01 Git是什么？
 
 - 分布式
@@ -37,7 +41,7 @@ git只能在本地（自己电脑上）做版本控制，然后再推送到远�
 
 
 
-## 04 东北热创业初期
+## 04 git管理初期（仅在本地管理）
 
 个人信息配置（执行一次即可）
 
@@ -100,3 +104,28 @@ git config --global user.name "your name"
 
 
 ## 07 回滚
+
+回滚到之前的版本
+
+```
+git log
+git reset --hard 版本号
+```
+
+回滚到之后的版本（回退之后，又要再往后到新版本）
+
+```
+git reflog
+git reset --hard 版本号
+```
+
+
+
+## 08 git命令小总结
+
+![image-20230323172145712](https://raw.githubusercontent.com/ajuicefans/git_learning/main/images/3.png)
+
+
+
+## 09 初识分支
+
