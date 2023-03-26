@@ -123,11 +123,11 @@ git reset --hard 版本号
 
 ## 08 git命令小总结
 
-![image-20230323172145712](https://raw.githubusercontent.com/ajuicefans/git_learning/main/images/3.png)
+![3](https://raw.githubusercontent.com/ajuicefans/git_learning/main/images/3.png)
 
 
 
-## 09 初识分支
+## 09 初识分支：做环境的隔离
 
 分支可以给使用者提供多个环境，意味着你可以把你的工作从开发主线上分离出来，以免影响开发主线
 
@@ -145,7 +145,7 @@ bug分支：修复bug
 
 ## 11 基于分支修复线上bug的具体过程
 
-![4](F:\lifeProject\git_learning\images\4.png)
+![4](https://raw.githubusercontent.com/ajuicefans/git_learning/main/images/4.png)
 
 ### 关于分支的命令总结
 
@@ -200,15 +200,120 @@ git merge 要合并的分支名
 
 ## 13 github
 
+git 和 github 没有直接的关系
+
+git 是版本控制的软件
+
+github 是代码托管的仓库
+
+
+
+使用github
+
+1. 注册github账号
+2. 创建仓库
+3. 本地代码推送
+
 
 
 ## 14 基于github做代码托管
+
+第一次把本地代码推送到远程仓库（github）
+
+```
+1. 给远程仓库起别名
+    git remote add origin 远程仓库地址
+2. 向远程推送代码
+    git push -u origin 分支
+    （这里的 -u 是默认提交到这个仓库的这个分支下）
+```
+
+第一次从远程仓库（github）获取代码
+
+```
+1. 克隆远程仓库代码（本地什么都没有的时候才clone）
+    git clone 远程仓库地址
+    （内部已经实现 git remote add origin 远程仓库地址）（默认的仓库别名就叫origin）
+    （克隆时，分支也会克隆，只不过不显示，但是是可以切换到其他分支）
+    
+2. 切换分支
+    git checkout 分支
+```
 
 
 
 ## 15 奔波于家和公司之间~
 
+在dev分支继续开发（dev分支开发时，要保持版本最新，即要先从main分支，merge一份到dev分支）
+
+```
+1. 切换到dev分支进行开发
+    git checkout dev
+2. 把main分支合并到dev（这时候dev分支上的代码也是最新的了）
+    git merge main
+3. 修改代码
+4. 提交代码
+    git add .
+    git commit -m 'xxx描述'
+    git push origin dev
+```
+
+回到家中继续写代码 + 到公司继续开发
+
+```
+1. 切换到dev分支进行开发
+    git checkout dev
+2. 拉代码（更新本地的代码）
+    git pull origin dev
+3. 继续开发
+4. 提交代码（更新远程仓库的代码）
+    git add .
+    git commit -m 'xxx描述'
+    git push origin dev
+```
+
+开发完毕，上线正式版本（即要把dev分支合并到main分支）
+
+```
+1. 将dev分支合并到main，进行上线（推送到远程仓库的main分支）
+    git checkout main
+    git merge dev
+    git push origin main
+    
+2. 把dev分支也推送到远程仓库中的dev分支中
+    git checkout dev
+    git merge main
+    git push origin dev
+
+此时 main分支和dev分支都是最新的代码
+```
+
 
 
 ## 16 有事忘记推送代码了
+
+即忘记push到远程仓库了，此时在别的地方开发时，pull不到最新的代码了
+
+继续开发其他功能，回到公司后，合并即可
+
+### 合并时有共同修改的地方就会产生冲突
+
+解决完冲突后，继续开发即可
+
+```
+git pull origin dev
+==
+git fetch origin dev
+git merge origin/dev（远程仓库的dev） 
+```
+
+![5](https://raw.githubusercontent.com/ajuicefans/git_learning/main/images/5.png)
+
+---
+
+
+
+## 17-19 rebase应用场景以及注意事项
+
+
 
